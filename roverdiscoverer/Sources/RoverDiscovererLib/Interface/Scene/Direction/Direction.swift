@@ -7,6 +7,22 @@
 
 import Foundation
 
-enum Direction {
-    case <#case#>
+public enum Direction: String {
+    case north = "N"
+    case south = "S"
+    case east = "E"
+    case west = "W"
+    
+    func operation() -> DirectionStrategy {
+        switch self {
+        case .north:
+            return NorthDirectionStrategy()
+        case .south:
+            return SouthDirectionStrategy()
+        case .east:
+            return EastDirectionStrategy()
+        case .west:
+            return WestDirectionStrategy()
+        }
+    }
 }

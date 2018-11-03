@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+protocol DirectionStrategy : class {
+    func turnLeft() -> Direction
+    func turnRight() -> Direction
+    func move(_ position: Position) -> Position
+}

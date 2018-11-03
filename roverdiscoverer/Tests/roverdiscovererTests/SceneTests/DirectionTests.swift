@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import RoverDiscovererLib
 
 class DirectionTests: XCTestCase {
 
@@ -17,16 +18,92 @@ class DirectionTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testGivenEastDirectionWhenTurnLeftShouldDisplayNorth() {
+        //Given
+        var direction = Direction.east
+        
+        //When
+        direction = direction.operation().turnLeft()
+        
+        //Then
+        XCTAssertEqual(direction, .north)
+    }
+    
+    func testGivenNorthDirectionWhenTurnLeftShouldDisplayWest() {
+        //Given
+        var direction = Direction.north
+        
+        //When
+        direction = direction.operation().turnLeft()
+        
+        //Then
+        XCTAssertEqual(direction, .west)
+    }
+    
+    func testGivenWestDirectionWhenTurnLeftShouldDisplaySouth() {
+        //Given
+        var direction = Direction.west
+        
+        //When
+        direction = direction.operation().turnLeft()
+        
+        //Then
+        XCTAssertEqual(direction, .south)
+    }
+    
+    func testGivenSouthDirectionWhenTurnLeftShouldDisplayEast() {
+        //Given
+        var direction = Direction.south
+        
+        //When
+        direction = direction.operation().turnLeft()
+        
+        //Then
+        XCTAssertEqual(direction, .east)
     }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testGivenEastDirectionWhenTurnRightShouldDisplaySouth() {
+        //Given
+        var direction = Direction.east
+        
+        //When
+        direction = direction.operation().turnRight()
+        
+        //Then
+        XCTAssertEqual(direction, .south)
+    }
+    
+    func testGivenSouthDirectionWhenTurnRightShouldDisplayWest() {
+        //Given
+        var direction = Direction.south
+        
+        //When
+        direction = direction.operation().turnRight()
+        
+        //Then
+        XCTAssertEqual(direction, .west)
+    }
+    
+    func testGivenWestDirectionWhenTurnRightShouldDisplayNorth() {
+        //Given
+        var direction = Direction.west
+        
+        //When
+        direction = direction.operation().turnRight()
+        
+        //Then
+        XCTAssertEqual(direction, .north)
+    }
+    
+    func testGivenNorthDirectionWhenTurnRightShouldDisplayEast() {
+        //Given
+        var direction = Direction.north
+        
+        //When
+        direction = direction.operation().turnRight()
+        
+        //Then
+        XCTAssertEqual(direction, .east)
     }
 
 }
