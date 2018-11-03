@@ -14,7 +14,10 @@ public class Rover {
     let plateau: Plateau
     static var movements: [Movement] = []
     
-    init(position: Position, direction: Direction, plateau: Plateau) {
+    init(position: Position, direction: Direction, plateau: Plateau) throws {
+        guard position >= plateau.origin && position <= plateau.topRightCorner else {
+            throw RoverDiscoverer.Error.invalidRoverOrigin
+        }
         self.position = position
         self.direction = direction
         self.plateau = plateau

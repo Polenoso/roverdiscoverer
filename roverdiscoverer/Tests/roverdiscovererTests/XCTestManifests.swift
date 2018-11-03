@@ -4,6 +4,7 @@ import XCTest
 public func allTests() -> [XCTestCaseEntry] {
     return [
         testCase(roverdiscovererTests.allTests),
+        testCase(RDFileManagerTests.allTests)
     ]
 }
 #endif

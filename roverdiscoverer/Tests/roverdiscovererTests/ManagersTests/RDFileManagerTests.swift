@@ -38,4 +38,7 @@ class RDFileManagerTests: XCTestCase {
         
     }
 
+    static var allTests = [
+        ("testGetFileFromJSONFileShouldReturnJSONDictionary", testGetFileFromJSONFileShouldReturnJSONDictionary),
+        ]
 }
