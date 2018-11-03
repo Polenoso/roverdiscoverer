@@ -17,6 +17,10 @@ final class roverdiscovererTests: XCTestCase {
 
         let process = Process()
         process.executableURL = fooBinary
+        
+        if((process.arguments == nil)) {
+            return
+        }
 
         let pipe = Pipe()
         process.standardOutput = pipe
