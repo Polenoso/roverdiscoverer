@@ -14,7 +14,12 @@ public final class RDFileManager {
         
         do {
             let currentDirectoryURL = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
-            let url = URL(fileURLWithPath: jsonPath, relativeTo: currentDirectoryURL)
+            let url: URL!
+            if #available(OSX 10.11, *) {
+                url = URL(fileURLWithPath: jsonPath, relativeTo: currentDirectoryURL)
+            } else {
+                url = URL(fileURLWithPath: jsonPath)
+            }
             let content = try String(contentsOf: url, encoding: .utf8)
             return try content.toJsonDictionary()
         } catch let error{

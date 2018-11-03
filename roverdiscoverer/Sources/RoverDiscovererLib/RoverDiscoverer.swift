@@ -7,7 +7,7 @@ public final class RoverDiscoverer {
     }
     
     public func run() throws {
-        guard arguments.count >= 1 else {
+        guard arguments.count > 1 else {
             throw RoverDiscoverer.Error.invalidArguments
         }
         
