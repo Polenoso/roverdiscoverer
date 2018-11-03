@@ -24,7 +24,7 @@ class RoverTests: XCTestCase {
         let plateau = Plateau(topRightCorner: Position(x: 4, y: 4))
         
         //When
-        rover = Rover(position: Position(x: 1, y: 1), direction: .east, plateau: plateau)
+        rover = try! Rover(position: Position(x: 1, y: 1), direction: .east, plateau: plateau)
         
         //Then
         XCTAssertEqual(rover.direction, .east)
@@ -35,7 +35,7 @@ class RoverTests: XCTestCase {
     func testGivenRoverFacingNorthWhenTurnLeftShouldFaceWest() {
         //Given
         let plateau = Plateau(topRightCorner: Position(x: 4, y: 4))
-        let rover = Rover(position: Position(x: 1, y: 1), direction: .north, plateau: plateau)
+        let rover = try! Rover(position: Position(x: 1, y: 1), direction: .north, plateau: plateau)
 
         //When
         rover.turnLeft()
@@ -48,7 +48,7 @@ class RoverTests: XCTestCase {
         //Given
         let plateau = Plateau(topRightCorner: Position(x: 4, y: 4))
         let origin = Position(x: 1, y: 1)
-        let rover = Rover(position: origin, direction: .north, plateau: plateau)
+        let rover = try! Rover(position: origin, direction: .north, plateau: plateau)
         
         //When
         let didMove = rover.move()
@@ -63,7 +63,7 @@ class RoverTests: XCTestCase {
         //Given
         let plateau = Plateau(topRightCorner: Position(x: 4, y: 4))
         let origin = Position(x: 1, y: 4)
-        let rover = Rover(position: origin, direction: .north, plateau: plateau)
+        let rover = try! Rover(position: origin, direction: .north, plateau: plateau)
         
         //When
         let didMove = rover.move()

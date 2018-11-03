@@ -16,11 +16,10 @@ public final class RoverDiscoverer {
         do {
             //Read configuration from argument
             guard let configuration = try RDFileManager.readFile(from: fileArgument) else { throw RoverDiscoverer.Error.invalidConfig }
-            debugPrint(configuration.debugDescription)
+            debugPrint("Configuration read: \(configuration.debugDescription)")
             
             //Wrap configuration
             let rover = try RDConfigParser.parseConfiguration(configJson: configuration)
-            debugPrint(rover)
             
             //Process movements
             for mov in Rover.movements {

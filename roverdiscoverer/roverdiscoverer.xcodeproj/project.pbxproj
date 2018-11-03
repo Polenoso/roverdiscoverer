@@ -123,6 +123,7 @@
 		D4358ACD218DA2DF00BA04FA /* PositionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionTests.swift; sourceTree = "<group>"; };
 		D4358ACF218DA4A200BA04FA /* RoverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverTests.swift; sourceTree = "<group>"; };
 		D4358AD1218DA7F500BA04FA /* MovementTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementTests.swift; sourceTree = "<group>"; };
+		D4358AD3218DAE0300BA04FA /* roverdiscoverer.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = roverdiscoverer.json; sourceTree = "<group>"; };
 		OBJ_11 /* RoverDiscoverer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverDiscoverer.swift; sourceTree = "<group>"; };
 		OBJ_14 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_15 /* roverdiscovererTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roverdiscovererTests.swift; sourceTree = "<group>"; };
@@ -198,6 +199,7 @@
 		D4358A94218CCDEB00BA04FA /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				D4358AD3218DAE0300BA04FA /* roverdiscoverer.json */,
 				D4358A95218CCE1300BA04FA /* testsimplefile.json */,
 			);
 			path = SupportingFiles;

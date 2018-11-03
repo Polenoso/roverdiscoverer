@@ -22,7 +22,7 @@ class MovementTests: XCTestCase {
         //Given
         let plateau = Plateau(topRightCorner: Position(x: 4, y: 4))
         let origin = Position(x: 1, y: 4)
-        let rover = Rover(position: origin, direction: .north, plateau: plateau)
+        let rover = try! Rover(position: origin, direction: .north, plateau: plateau)
         let movement = Movement.left
         
         //When
@@ -36,7 +36,7 @@ class MovementTests: XCTestCase {
         //Given
         let plateau = Plateau(topRightCorner: Position(x: 4, y: 4))
         let origin = Position(x: 1, y: 4)
-        let rover = Rover(position: origin, direction: .north, plateau: plateau)
+        let rover = try! Rover(position: origin, direction: .north, plateau: plateau)
         let movement = Movement.right
         
         //When
@@ -50,7 +50,7 @@ class MovementTests: XCTestCase {
         //Given
         let plateau = Plateau(topRightCorner: Position(x: 4, y: 4))
         let origin = Position(x: 1, y: 2)
-        let rover = Rover(position: origin, direction: .north, plateau: plateau)
+        let rover = try! Rover(position: origin, direction: .north, plateau: plateau)
         let movement = Movement.move
         
         //When
